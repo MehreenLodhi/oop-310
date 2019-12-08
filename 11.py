@@ -13,6 +13,29 @@ def middle(nom):
     return tell
 print middle(nom)
 
+#QUESTION NO.2:
+f=input()
+fhand=open(f)
+weekdays = ['Sun','Mon','Tues','Wed','Thu','Fri','Sat']
+count=0
+for line in fhand:
+    words = line.split()
+    #print'Debug:'words
+    if len(words) == 0: continue
+    if words[0]!='From': continue
+    if words[2] in weekdays[:]:
+     print(words[2])
+
+#QUESTION NO.3:
+g=input('file')
+fright = open(g)
+count = 0
+for line in fright:
+    words = line.split()
+    #print 'Debug:',words
+    if (len(words)>0) and (words[0] == 'From'):
+      print(words[2])
+
 #QUESTION NO.4:
 fname = input("Enter file name: ")
 fh = open(fname)
